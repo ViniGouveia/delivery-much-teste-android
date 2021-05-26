@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">delivery-much-teste-android</string>
+    <string name="dialog_error_title">Ops…</string>
+    <string name="dialog_error_ok">OK</string>
+
+    <string name="api_url">OK</string>
 </resources>

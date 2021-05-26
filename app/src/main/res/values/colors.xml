@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="primary000">#FAFAFA</color>
+    <color name="primary100">#F5F5F5</color>
+    <color name="primary200">#EEEEEE</color>
+    <color name="primary300">#E0E0E0</color>
+    <color name="primary400">#BDBDBD</color>
+    <color name="primary500">#9E9E9E</color>
+    <color name="primary600">#757575</color>
+    <color name="primary700">#616161</color>
+    <color name="primary800">#424242</color>
+    <color name="primary900">#212121</color>
+    <!-- Primary Colors -->
 </resources>
