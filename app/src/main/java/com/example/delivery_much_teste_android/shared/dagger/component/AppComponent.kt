@@ -1,9 +1,7 @@
 package com.example.delivery_much_teste_android.shared.dagger.component
 
 import com.example.delivery_much_teste_android.shared.BaseApplication
-import com.example.delivery_much_teste_android.shared.dagger.module.AppModule
-import com.example.delivery_much_teste_android.shared.dagger.module.BuildersModule
-import com.example.delivery_much_teste_android.shared.dagger.module.NetworkModule
+import com.example.delivery_much_teste_android.shared.dagger.module.*
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -19,11 +17,12 @@ import javax.inject.Singleton
         AndroidSupportInjectionModule::class,
         NetworkModule::class,
         AppModule::class,
-        BuildersModule::class
+        BuildersModule::class,
+        UseCaseModule::class,
+        ServiceModule::class
     ]
 )
 
-@Suppress("unused")
 interface AppComponent : AndroidInjector<BaseApplication> {
 
     @Component.Builder

@@ -14,6 +14,7 @@
     <dimen name="spacing_medium">16dp</dimen>
     <dimen name="spacing_large">24dp</dimen>
     <dimen name="spacing_extra_large">32dp</dimen>
+    <dimen name="spacing_huge">48dp</dimen>
     <!-- Default Spacing Dimens -->
 
     <!-- Text Sizes -->
@@ -22,5 +23,7 @@
     <dimen name="text_normal">14sp</dimen>
     <dimen name="text_small">12sp</dimen>
     <!-- Text Sizes -->
+
+    <dimen name="repositories_search_field_height">48dp</dimen>
 
 </resources>

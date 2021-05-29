@@ -7,7 +7,10 @@ import com.example.delivery_much_teste_android.shared.base.BaseContract
  */
 interface MainContract {
 
-    interface Activity : BaseContract.ActivityView
+    interface Activity : BaseContract.ActivityView {
+        fun showBackButton()
+        fun hideBackButton()
+    }
 
     interface Presenter : BaseContract.Presenter
 

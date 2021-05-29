@@ -4,7 +4,12 @@ import com.example.delivery_much_teste_android.R
 import com.example.delivery_much_teste_android.shared.network.ThrowableHandler
 import com.example.delivery_much_teste_android.shared.provider.DisposableProvider
 import com.example.delivery_much_teste_android.shared.provider.SchedulerProvider
-import io.reactivex.*
+import io.reactivex.Completable
+import io.reactivex.CompletableSource
+import io.reactivex.CompletableTransformer
+import io.reactivex.Single
+import io.reactivex.SingleSource
+import io.reactivex.SingleTransformer
 
 /**
  * @author Vinicius Gouveia on 26/05/2021
@@ -42,7 +47,7 @@ abstract class BasePresenter<ViewType : BaseContract.ActionView>(
         }
     }
 
-    fun getThrowableMessage(throwable: Throwable) =
+    private fun getThrowableMessage(throwable: Throwable) =
         throwableHandler?.getExceptionMessage(throwable)!!
 
     protected fun <T> observeOnUiAfterResult() = UIThreadResultTransformer<T>()

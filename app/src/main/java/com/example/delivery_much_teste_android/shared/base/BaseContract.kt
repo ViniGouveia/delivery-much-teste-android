@@ -17,7 +17,6 @@ interface BaseContract {
         fun hideLoading()
         fun getString(@StringRes stringRes: Int): String
         fun getString(@StringRes stringRes: Int, vararg args: Any?): String
-        fun executeActionIfViewIsVisible(action: () -> Unit)
         fun showOneButtonDialog(
             title: String,
             body: String,

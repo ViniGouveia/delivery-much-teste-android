@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary000</item>
-        <item name="colorPrimaryDark">@color/primary900</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/primary000</item>
-        <item name="colorAccent">@color/primary500</item>
-        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Primary</item>
-    </style>
-
     <style name="TextDark12" parent="AppTheme">
         <item name="android:textSize">@dimen/text_small</item>
         <item name="android:textColor">@color/primary600</item>

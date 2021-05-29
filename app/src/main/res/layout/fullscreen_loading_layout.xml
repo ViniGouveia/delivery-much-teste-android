@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary000"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:background="@color/primary000">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="@dimen/fullscreen_loading_size"
-        android:layout_height="@dimen/fullscreen_loading_size"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/fullscreen_loading" />
+    <ImageView
+        android:layout_width="@dimen/spacing_huge"
+        android:layout_height="@dimen/spacing_huge"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_git_hub_black"
+        tools:ignore="ContentDescription" />
 
-</LinearLayout>
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progress_bar_loading" />
+
+</RelativeLayout>

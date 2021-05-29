@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/repositories_rl_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/repositories_search_field_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:layout_marginVertical="@dimen/spacing_large"
+        android:background="@drawable/repositories_search_field_background">
+
+        <ImageView
+            android:id="@+id/repositories_ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/spacing_normal"
+            android:src="@drawable/ic_search"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/repositories_search_divider"
+            android:layout_width="@dimen/spacing_mini"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/repositories_ic_search"
+            android:background="@color/black" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/repositories_et_search"
+            style="@style/TextDark14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:layout_toStartOf="@+id/repositories_ic_clear_search"
+            android:layout_toEndOf="@+id/repositories_search_divider"
+            android:background="@color/transparent"
+            android:hint="@string/repositories_et_search_hint"
+            android:inputType="text|textCapSentences"
+            android:maxLength="35"
+            android:maxLines="1"
+            android:textColor="@color/primary900"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/repositories_ic_clear_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/spacing_normal"
+            android:src="@drawable/ic_close"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/repositories_rv_repositories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/repositories_rl_search_box"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        tools:itemCount="8"
+        tools:listitem="@layout/repositories_list_item_layout" />
+
+</RelativeLayout>

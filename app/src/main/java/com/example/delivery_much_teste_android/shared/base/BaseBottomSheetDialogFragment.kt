@@ -67,10 +67,6 @@ abstract class BaseBottomSheetDialogFragment<ActivityType, PresenterType> :
         initialize()
     }
 
-    override fun executeActionIfViewIsVisible(action: () -> Unit) {
-        if (isVisible) action()
-    }
-
     override fun androidInjector(): AndroidInjector<Any> = androidInjector
 
     override fun showLoading(textRes: Int) = parentActivity.showLoading()

@@ -3,5 +3,15 @@
     <string name="dialog_error_title">Ops…</string>
     <string name="dialog_error_ok">OK</string>
 
-    <string name="api_url">OK</string>
+    <string name="api_url">https://api.github.com/</string>
+
+    <!-- Main Activity-->
+    <string name="toolbar_title">GitHublic.io</string>
+    <string name="repositories_et_search_hint">Digite o nome do repositório que deseja</string>
+    <!-- Main Activity-->
+
+    <!-- Throwable Handler -->
+    <string name="throwable_handler_generic_message">Não foi possível identificar a causa do erro no servidor, ele pode estar temporariamente indisponível.</string>
+    <string name="throwable_handler_no_network">Conecte-se a alguma rede com conexão estável e tente novamente.</string>
+    <!-- Throwable Handler -->
 </resources>
