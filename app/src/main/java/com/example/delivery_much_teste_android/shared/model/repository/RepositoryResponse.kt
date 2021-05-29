@@ -1,5 +1,6 @@
-package com.example.delivery_much_teste_android.shared.model
+package com.example.delivery_much_teste_android.shared.model.repository
 
+import com.example.delivery_much_teste_android.shared.model.repository.RepositoryOwnerResponse
 import com.google.gson.annotations.SerializedName
 
 /**

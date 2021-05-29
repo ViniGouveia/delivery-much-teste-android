@@ -59,12 +59,22 @@
 
     </RelativeLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/repositories_bt_fetch_repositories"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:text="@string/repositories_bt_fetch_repositories" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/repositories_rv_repositories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/repositories_rl_search_box"
         android:layout_marginHorizontal="@dimen/spacing_large"
+        android:visibility="gone"
         tools:itemCount="8"
         tools:listitem="@layout/repositories_list_item_layout" />
 

@@ -5,7 +5,7 @@ import android.view.View
 import com.example.delivery_much_teste_android.R
 import com.example.delivery_much_teste_android.shared.base.BaseAdapter
 import com.example.delivery_much_teste_android.shared.base.BaseViewHolder
-import com.example.delivery_much_teste_android.shared.model.Repository
+import com.example.delivery_much_teste_android.shared.model.repository.Repository
 import kotlinx.android.synthetic.main.repositories_list_item_layout.view.*
 
 /**

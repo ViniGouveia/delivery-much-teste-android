@@ -50,7 +50,6 @@ class AppThrowableHandler(
         return exceptionMessage
     }
 
-    @Suppress("TooGenericExceptionCaught")
     private fun convertResponse(response: Response<*>): GenericResponse? {
         val converter: Converter<ResponseBody, GenericResponse?> = retrofit.responseBodyConverter(
             GenericResponse::class.java, arrayOfNulls<Annotation>(0)

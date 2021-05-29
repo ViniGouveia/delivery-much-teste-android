@@ -1,7 +1,7 @@
 package com.example.delivery_much_teste_android.ui.repositories
 
 import com.example.delivery_much_teste_android.shared.base.BaseContract
-import com.example.delivery_much_teste_android.shared.model.Repository
+import com.example.delivery_much_teste_android.shared.model.repository.Repository
 import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoriesUseCase
 
 /**
@@ -11,6 +11,10 @@ interface RepositoriesContract {
 
     interface View : BaseContract.ActionView {
         fun setRepositoriesList(repositories: List<Repository>)
+        fun showRepositoriesButton()
+        fun hideRepositoriesButton()
+        fun showRepositoriesList()
+        fun hideRepositoriesList()
     }
 
     interface Presenter : BaseContract.Presenter {

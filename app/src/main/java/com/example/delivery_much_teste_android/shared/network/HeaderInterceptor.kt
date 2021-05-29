@@ -1,6 +1,5 @@
 package com.example.delivery_much_teste_android.shared.network
 
-import android.content.Context
 import android.os.Build
 import com.example.delivery_much_teste_android.BuildConfig
 import okhttp3.Interceptor
@@ -9,9 +8,7 @@ import okhttp3.Response
 /**
  * @author Vinicius Gouveia on 29/05/2021
  */
-class HeaderInterceptor(
-    private val context: Context
-) : Interceptor {
+class HeaderInterceptor : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         var original = chain.request().newBuilder().build()
@@ -33,6 +30,6 @@ class HeaderInterceptor(
         private const val OS_KEY = "Os"
         private const val OS_VERSION_KEY = "OsVersion"
         private const val OS_NAME = "Android"
-        const val HEADER_KEY_AUTHORIZATION = "Accept"
+        private const val HEADER_KEY_AUTHORIZATION = "Accept"
     }
 }

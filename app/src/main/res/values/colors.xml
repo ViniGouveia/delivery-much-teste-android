@@ -21,4 +21,7 @@
     <color name="primary800">#424242</color>
     <color name="primary900">#212121</color>
     <!-- Primary Colors -->
+
+    <color name="link_color">#1C7ED6</color>
+
 </resources>

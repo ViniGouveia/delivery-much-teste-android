@@ -2,7 +2,7 @@ package com.example.delivery_much_teste_android.ui.repositories
 
 import com.example.delivery_much_teste_android.shared.base.BasePresenter
 import com.example.delivery_much_teste_android.shared.extensions.addTo
-import com.example.delivery_much_teste_android.shared.model.Repository
+import com.example.delivery_much_teste_android.shared.model.repository.Repository
 import com.example.delivery_much_teste_android.shared.network.ThrowableHandler
 import com.example.delivery_much_teste_android.shared.provider.DisposableProvider
 import com.example.delivery_much_teste_android.shared.provider.SchedulerProvider
@@ -33,7 +33,11 @@ class RepositoriesPresenterImpl(
             .doFinally { view.hideLoading() }
             .subscribe({
                 repositoriesList = it
-                view.setRepositoriesList(it)
+                with(view) {
+                    setRepositoriesList(it)
+                    showRepositoriesList()
+                    hideRepositoriesButton()
+                }
             }, ::showError)
             .addTo(disposableProvider!!)
     }

@@ -3,6 +3,8 @@ package com.example.delivery_much_teste_android.shared.dagger.module
 import com.example.delivery_much_teste_android.shared.service.RepositoryService
 import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoriesUseCase
 import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoriesUseCaseImpl
+import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoryOwnerInfoUseCase
+import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoryOwnerInfoUseCaseImpl
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -20,4 +22,12 @@ object UseCaseModule {
         service: RepositoryService
     ): FetchRepositoriesUseCase =
         FetchRepositoriesUseCaseImpl(service)
+
+    @Provides
+    @Reusable
+    @JvmStatic
+    fun provideFetchRepositoryOwnerInfoUseCase(
+        service: RepositoryService
+    ): FetchRepositoryOwnerInfoUseCase =
+        FetchRepositoryOwnerInfoUseCaseImpl(service)
 }

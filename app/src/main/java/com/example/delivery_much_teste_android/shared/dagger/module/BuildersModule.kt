@@ -4,6 +4,8 @@ import com.example.delivery_much_teste_android.ui.MainActivity
 import com.example.delivery_much_teste_android.ui.MainModule
 import com.example.delivery_much_teste_android.ui.repositories.RepositoriesFragment
 import com.example.delivery_much_teste_android.ui.repositories.RepositoriesModule
+import com.example.delivery_much_teste_android.ui.repositories.details.RepositoryDetailsFragment
+import com.example.delivery_much_teste_android.ui.repositories.details.RepositoryDetailsModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -18,4 +20,7 @@ interface BuildersModule {
 
     @ContributesAndroidInjector(modules = [RepositoriesModule::class])
     fun bindRepositoriesFragment(): RepositoriesFragment
+
+    @ContributesAndroidInjector(modules = [RepositoryDetailsModule::class])
+    fun bindRepositoryDetailsFragment(): RepositoryDetailsFragment
 }
