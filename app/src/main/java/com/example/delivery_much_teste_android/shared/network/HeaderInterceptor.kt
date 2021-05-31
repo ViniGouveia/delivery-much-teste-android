@@ -17,7 +17,6 @@ class HeaderInterceptor : Interceptor {
             addHeader(OS_KEY, OS_NAME)
             addHeader(APP_VERSION_KEY, BuildConfig.VERSION_NAME)
             addHeader(USER_AGENT_AUTHORIZATION, BuildConfig.APPLICATION_ID)
-            addHeader(AUTHORIZATION_HEADER, AUTH_TOKEN)
             addHeader(OS_VERSION_KEY, Build.VERSION.SDK_INT.toString())
             addHeader(HEADER_KEY_AUTHORIZATION, KEY_AUTHORIZATION)
 
@@ -32,8 +31,6 @@ class HeaderInterceptor : Interceptor {
         private const val USER_AGENT_AUTHORIZATION = "User-Agent"
         private const val OS_KEY = "Os"
         private const val OS_VERSION_KEY = "OsVersion"
-        private const val AUTH_TOKEN = "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"
-        private const val AUTHORIZATION_HEADER = "Authorization"
         private const val OS_NAME = "Android"
         private const val HEADER_KEY_AUTHORIZATION = "Accept"
     }
