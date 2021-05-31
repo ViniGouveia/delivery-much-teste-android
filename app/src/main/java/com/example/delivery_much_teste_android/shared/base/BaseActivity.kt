@@ -5,7 +5,11 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.*
+import android.view.LayoutInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import com.example.delivery_much_teste_android.R
@@ -134,6 +138,12 @@ abstract class BaseActivity<PresenterType> : AppCompatActivity(), BaseContract.A
                 )
         }
     }
+
+    override fun showError(error: String) = showOneButtonDialog(
+        getString(R.string.dialog_error_title),
+        error,
+        getString(R.string.dialog_error_ok)
+    )
 
     override fun openFragment(fragment: BaseFragment<*, *>) {
         check(frameLayoutId != NO_FRAME_LAYOUT_RES) { "Container para fragmentos inexistente." }

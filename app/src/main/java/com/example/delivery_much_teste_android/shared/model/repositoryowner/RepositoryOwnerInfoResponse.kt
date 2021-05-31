@@ -7,6 +7,6 @@ import com.google.gson.annotations.SerializedName
  */
 data class RepositoryOwnerInfoResponse(
     @SerializedName("name") val name: String,
-    @SerializedName("url") val profileUrl: String,
+    @SerializedName("html_url") val profileUrl: String,
     @SerializedName("avatar_url") val avatarUrl: String
 )

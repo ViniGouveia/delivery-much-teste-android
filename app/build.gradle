@@ -93,9 +93,6 @@ dependencies {
     // mockk
     testImplementation("io.mockk:mockk:1.10.0")
 
-    // lottie
-    implementation("com.airbnb.android:lottie:3.3.0")
-
     //circle image
     implementation 'de.hdodenhof:circleimageview:3.0.1'
 

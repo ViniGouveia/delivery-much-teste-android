@@ -1,10 +1,12 @@
 package com.example.delivery_much_teste_android.ui
 
+import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import com.example.delivery_much_teste_android.R
 import com.example.delivery_much_teste_android.shared.base.BaseActivity
 import com.example.delivery_much_teste_android.ui.repositories.RepositoriesFragment
-import kotlinx.android.synthetic.main.main_activity_layout.*
+import kotlinx.android.synthetic.main.main_activity_layout.main_toolbar
+import kotlinx.android.synthetic.main.main_activity_layout.main_tv_toolbar_title
 import javax.inject.Inject
 
 /**
@@ -32,5 +34,9 @@ class MainActivity : BaseActivity<MainContract.Presenter>(), MainContract.Activi
 
     override fun hideBackButton() {
         toolbar?.navigationIcon = null
+    }
+
+    override fun setToolbarTitle(@StringRes title: Int) {
+        main_tv_toolbar_title.text = getText(title)
     }
 }

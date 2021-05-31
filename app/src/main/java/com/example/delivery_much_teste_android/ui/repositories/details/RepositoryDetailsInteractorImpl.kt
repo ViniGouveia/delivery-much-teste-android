@@ -5,7 +5,4 @@ import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoryOwn
 /**
  * @author Vinicius Gouveia on 29/05/2021
  */
-class RepositoryDetailsInteractorImpl(
-    fetchRepositoryOwnerInfoUseCase: FetchRepositoryOwnerInfoUseCase
-) : RepositoryDetailsContract.Interactor,
-    FetchRepositoryOwnerInfoUseCase by fetchRepositoryOwnerInfoUseCase
+class RepositoryDetailsInteractorImpl : RepositoryDetailsContract.Interactor

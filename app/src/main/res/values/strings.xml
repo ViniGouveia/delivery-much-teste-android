@@ -3,7 +3,7 @@
     <string name="dialog_error_title">Ops…</string>
     <string name="dialog_error_ok">OK</string>
 
-    <string name="api_url">https://api.github.com</string>
+    <string name="base_api_url">https://api.github.com</string>
 
     <!-- Throwable Handler -->
     <string name="throwable_handler_generic_message">Não foi possível identificar a causa do erro no servidor, ele pode estar temporariamente indisponível.</string>
@@ -16,7 +16,7 @@
     <!-- Main Activity-->
 
     <!-- Repositories Fragment -->
-    <string name="repositories_et_search_hint">Digite o nome do repositório que deseja</string>
+    <string name="repositories_et_search_hint">Digite o nome do repositório</string>
     <!-- Repositories Fragment -->
 
     <!-- Repository Details Fragment -->
@@ -25,4 +25,9 @@
     <string name="repository_details_tv_owner_name">Dono do Repositório</string>
     <string name="repository_details_tv_visit_profile"><u>Visitar perfil</u></string>
     <!-- Repository Details Fragment -->
+
+    <!-- Repository Owner Fragment -->
+    <string name="repository_owner_toolbar_title">Perfil do Usuário</string>
+    <string name="repositories_tv_empty_list_alert">Nenhum repositório encontrado</string>
+    <!-- Repository Owner Fragment -->
 </resources>

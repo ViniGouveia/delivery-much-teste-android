@@ -4,6 +4,7 @@ import com.example.delivery_much_teste_android.shared.network.ThrowableHandler
 import com.example.delivery_much_teste_android.shared.provider.DisposableProvider
 import com.example.delivery_much_teste_android.shared.provider.SchedulerProvider
 import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoriesUseCase
+import com.example.delivery_much_teste_android.shared.usecase.FetchRepositoryOwnerInfoUseCase
 import com.example.delivery_much_teste_android.ui.repositories.adapter.RepositoriesAdapter
 import dagger.Module
 import dagger.Provides
@@ -32,9 +33,11 @@ class RepositoriesModule {
 
     @Provides
     fun provideInteractor(
-        fetchRepositoriesUseCase: FetchRepositoriesUseCase
+        fetchRepositoriesUseCase: FetchRepositoriesUseCase,
+        fetchRepositoryOwnerInfoUseCase: FetchRepositoryOwnerInfoUseCase
     ): RepositoriesContract.Interactor = RepositoriesInteractorImpl(
-        fetchRepositoriesUseCase
+        fetchRepositoriesUseCase,
+        fetchRepositoryOwnerInfoUseCase
     )
 
     @Provides
@@ -43,5 +46,7 @@ class RepositoriesModule {
     ): RepositoriesAdapter = RepositoriesAdapter(view.requireContext())
 
     @Provides
-    fun provideRouter(): RepositoriesContract.Router = RepositoriesRouterImpl()
+    fun provideRouter(
+        fragment: RepositoriesFragment
+    ): RepositoriesContract.Router = RepositoriesRouterImpl(fragment.requireActivity())
 }

@@ -59,14 +59,17 @@
 
     </RelativeLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/repositories_bt_fetch_repositories"
-        style="@style/PrimaryButton"
-        android:layout_width="match_parent"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/repositories_tv_empty_list_alert"
+        style="@style/TextDark16.Bold"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginHorizontal="@dimen/spacing_large"
-        android:text="@string/repositories_bt_fetch_repositories" />
+        android:layout_below="@+id/repositories_rl_search_box"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/spacing_huge"
+        android:drawableTop="@drawable/ic_alert"
+        android:text="@string/repositories_tv_empty_list_alert"
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/repositories_rv_repositories"
@@ -74,7 +77,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/repositories_rl_search_box"
         android:layout_marginHorizontal="@dimen/spacing_large"
-        android:visibility="gone"
         tools:itemCount="8"
         tools:listitem="@layout/repositories_list_item_layout" />
 

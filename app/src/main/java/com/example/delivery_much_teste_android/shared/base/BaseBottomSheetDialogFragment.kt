@@ -71,6 +71,8 @@ abstract class BaseBottomSheetDialogFragment<ActivityType, PresenterType> :
 
     override fun showLoading(textRes: Int) = parentActivity.showLoading()
 
+    override fun showError(error: String) = parentActivity.showError(error)
+
     override fun hideLoading() = parentActivity.hideLoading()
 
     override fun showOneButtonDialog(

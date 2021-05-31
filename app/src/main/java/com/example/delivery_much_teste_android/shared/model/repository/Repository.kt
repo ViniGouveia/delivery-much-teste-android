@@ -1,5 +1,7 @@
 package com.example.delivery_much_teste_android.shared.model.repository
 
+import com.example.delivery_much_teste_android.shared.extensions.emptyString
+
 /**
  * @author Vinicius Gouveia on 29/05/2021
  */
@@ -13,6 +15,6 @@ data class Repository(
         response.repositoryId,
         response.repositoryOwner.username,
         response.repositoryName,
-        response.repositoryDescription
+        response.repositoryDescription ?: String.emptyString()
     )
 }

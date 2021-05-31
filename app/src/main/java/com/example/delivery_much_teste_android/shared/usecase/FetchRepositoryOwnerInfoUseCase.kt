@@ -14,11 +14,13 @@ interface FetchRepositoryOwnerInfoUseCase {
 class FetchRepositoryOwnerInfoUseCaseImpl(
     private val service: RepositoryService
 ) : FetchRepositoryOwnerInfoUseCase {
-    override fun fetchRepositoryOwnerInfo(ownerUsername: String) = Single.just(
-        RepositoryOwnerInfo(
-            "José da Silva",
-            "https://www.google.com.br/",
-            "https://image.flaticon.com/icons/png/512/147/147144.png"
-        )
-    )
+    override fun fetchRepositoryOwnerInfo(ownerUsername: String): Single<RepositoryOwnerInfo> =
+        service.fetchRepositoryOwnerInfo(ownerUsername).map(::RepositoryOwnerInfo)
+//        Single.just(
+//            RepositoryOwnerInfo(
+//                "José da Silva",
+//                "https://www.google.com.br/",
+//                "https://image.flaticon.com/icons/png/512/147/147144.png"
+//            )
+//        ).delay(3000L, TimeUnit.MILLISECONDS)
 }

@@ -88,6 +88,8 @@ abstract class BaseFragment<ActivityType, PresenterType> : Fragment(), BaseContr
 
     override fun hideLoading() = parentActivity.hideLoading()
 
+    override fun showError(error: String) = parentActivity.showError(error)
+
     override fun showOneButtonDialog(
         title: String,
         body: String,

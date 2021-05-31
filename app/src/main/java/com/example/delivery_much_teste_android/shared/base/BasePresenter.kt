@@ -1,6 +1,5 @@
 package com.example.delivery_much_teste_android.shared.base
 
-import com.example.delivery_much_teste_android.R
 import com.example.delivery_much_teste_android.shared.network.ThrowableHandler
 import com.example.delivery_much_teste_android.shared.provider.DisposableProvider
 import com.example.delivery_much_teste_android.shared.provider.SchedulerProvider
@@ -29,22 +28,10 @@ abstract class BasePresenter<ViewType : BaseContract.ActionView>(
         disposableProvider?.dispose()
     }
 
-    protected fun getErrorMessage(throwable: Throwable): String {
-        val messageException = getThrowableMessage(throwable)
-        return messageException.message ?: view.getString(messageException.messageResId!!)
-    }
-
     protected fun showError(throwable: Throwable) {
         val messageException = getThrowableMessage(throwable)
         val message = messageException.message ?: view.getString(messageException.messageResId!!)
-        with(view) {
-            showOneButtonDialog(
-                getString(R.string.dialog_error_title),
-                message,
-                getString(R.string.dialog_error_ok),
-                null
-            )
-        }
+        view.showError(message)
     }
 
     private fun getThrowableMessage(throwable: Throwable) =

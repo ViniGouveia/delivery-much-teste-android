@@ -5,7 +5,6 @@ import com.bumptech.glide.Glide
 import com.example.delivery_much_teste_android.R
 import com.example.delivery_much_teste_android.shared.base.BaseBottomSheetDialogFragment
 import com.example.delivery_much_teste_android.shared.model.RepositoryDetailsDisplay
-import com.example.delivery_much_teste_android.shared.model.repository.Repository
 import com.example.delivery_much_teste_android.ui.MainContract
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.repository_details_layout.repository_details_iv_owner_avatar
@@ -27,7 +26,7 @@ class RepositoryDetailsFragment :
 
     override val layoutRes = R.layout.repository_details_layout
 
-    private lateinit var repository: Repository
+    private lateinit var display: RepositoryDetailsDisplay
     private lateinit var callback: ((String) -> Unit)
 
     override fun getTheme() = R.style.BottomSheetDialogTheme
@@ -36,13 +35,9 @@ class RepositoryDetailsFragment :
         BottomSheetDialog(requireContext(), theme)
 
     override fun initialize() {
-        presenter.fetchOwnerInfo(repository)
-    }
-
-    override fun fillFields(display: RepositoryDetailsDisplay) {
         repository_details_iv_owner_avatar.apply {
             Glide.with(requireContext())
-                .load(display.repositoryOwnerAvatar)
+                .load(this@RepositoryDetailsFragment.display.repositoryOwnerAvatar)
                 .into(this)
         }
 
@@ -52,15 +47,16 @@ class RepositoryDetailsFragment :
 
         repository_details_tv_visit_profile.setOnClickListener {
             callback.invoke(display.repositoryOwnerUrl)
+            dismiss()
         }
     }
 
     companion object {
         fun newInstance(
-            repository: Repository,
+            display: RepositoryDetailsDisplay,
             callback: ((String) -> Unit)
         ) = RepositoryDetailsFragment().apply {
-            this.repository = repository
+            this.display = display
             this.callback = callback
         }
     }
