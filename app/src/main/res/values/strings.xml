@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">delivery-much-teste-android</string>
+    <string name="dialog_error_title">Ops…</string>
+    <string name="dialog_error_ok">OK</string>
+
+    <string name="base_api_url">https://api.github.com</string>
+
+    <!-- Throwable Handler -->
+    <string name="throwable_handler_generic_message">Não foi possível identificar a causa do erro no servidor, ele pode estar temporariamente indisponível.</string>
+    <string name="throwable_handler_no_network">Conecte-se a alguma rede com conexão estável e tente novamente.</string>
+    <string name="repositories_bt_fetch_repositories">Buscar Repositórios</string>
+    <!-- Throwable Handler -->
+
+    <!-- Main Activity-->
+    <string name="toolbar_title">GitHublic.io</string>
+    <!-- Main Activity-->
+
+    <!-- Repositories Fragment -->
+    <string name="repositories_et_search_hint">Digite o nome do repositório</string>
+    <!-- Repositories Fragment -->
+
+    <!-- Repository Details Fragment -->
+    <string name="repository_details_tv_repository_details">Descrição</string>
+    <string name="repository_details_tv_repository_name">Nome do Repositório</string>
+    <string name="repository_details_tv_owner_name">Dono do Repositório</string>
+    <string name="repository_details_tv_visit_profile"><u>Visitar perfil</u></string>
+    <!-- Repository Details Fragment -->
+
+    <!-- Repository Owner Fragment -->
+    <string name="repository_owner_toolbar_title">Perfil do Usuário</string>
+    <string name="repositories_tv_empty_list_alert">Nenhum repositório encontrado</string>
+    <!-- Repository Owner Fragment -->
 </resources>
