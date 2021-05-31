@@ -5,8 +5,10 @@ import android.view.View
 import com.example.delivery_much_teste_android.R
 import com.example.delivery_much_teste_android.shared.base.BaseAdapter
 import com.example.delivery_much_teste_android.shared.base.BaseViewHolder
+import com.example.delivery_much_teste_android.shared.extensions.capitalize
 import com.example.delivery_much_teste_android.shared.model.repository.Repository
-import kotlinx.android.synthetic.main.repositories_list_item_layout.view.*
+import kotlinx.android.synthetic.main.repositories_list_item_layout.view.repositories_list_item_tv_name
+import kotlinx.android.synthetic.main.repositories_list_item_layout.view.repositories_list_item_tv_owner
 
 /**
  * @author Vinicius Gouveia on 29/05/2021
@@ -27,8 +29,9 @@ class RepositoriesAdapter(context: Context) : BaseAdapter<Repository>(context) {
         override fun bind(item: Repository, position: Int) {
             with(itemView) {
                 item.apply {
-                    repositories_list_item_tv_name.text = repositoryName
-                    repositories_list_item_tv_owner.text = repositoryOwnerUsername
+                    repositories_list_item_tv_name.text =
+                        repositoryName.capitalize()
+                    repositories_list_item_tv_owner.text = repositoryOwnerUsername.capitalize()
                 }
 
                 setOnClickListener { callback.invoke(item) }

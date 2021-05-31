@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.example.delivery_much_teste_android.R
 import com.example.delivery_much_teste_android.shared.base.BaseBottomSheetDialogFragment
+import com.example.delivery_much_teste_android.shared.extensions.capitalize
 import com.example.delivery_much_teste_android.shared.model.RepositoryDetailsDisplay
 import com.example.delivery_much_teste_android.ui.MainContract
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -42,7 +43,7 @@ class RepositoryDetailsFragment :
         }
 
         repository_details_tv_owner_name.text = display.repositoryOwnerName
-        repository_details_tv_repository_name.text = display.repositoryName
+        repository_details_tv_repository_name.text = display.repositoryName.capitalize()
         repository_details_tv_repository_details.text = display.repositoryDescription
 
         repository_details_tv_visit_profile.setOnClickListener {
