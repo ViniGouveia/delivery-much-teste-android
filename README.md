@@ -1,5 +1,5 @@
 <h1 align="start">Aplicação GitHublic.io</h1>
-<p align="start">Aplicação em arquitetura VIPER, usando as melhores práticas e comunicação assíncrona com a API do GitHub. </p>
+<p align="start">Aplicação em arquitetura MVP, usando as melhores práticas e comunicação assíncrona com a API do GitHub. </p>
 
 <h1 align="start">Sobre</h1>
 <p align="start">O objetivo da aplicação é listar os repositórios públicos do GitHub, com opção de filtrar a lista através do campo de filtro e ao clicar no repositório desejado exibir detalhes do mesmo, dando além disso, a opção de visitar o perfil do dono do repositório.</p>
